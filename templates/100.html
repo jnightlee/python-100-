@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python练习题</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<h1>１ 数据类型篇</h1>
+<h2>1.1 基本数据类型</h2>
+<h3>1.1.1 逻辑推理练习（类型转换）</h3>
+<p>不运行程序，说出下面程序的执行结果</p>
+<!--代码输出区-->
+第1题:
+<pre class="python"><code> 4.0 == 4</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer1"></textarea>
+<p><br/></p>
+第2题:
+<pre class="python"><code> "4.0" == 4</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer2"></textarea>
+<p><br/></p>
+第3题:
+<pre class="python"><code> bool("1")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer3"></textarea>
+<p><br/></p>
+第4题:
+<pre class="python"><code> bool("0")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer4"></textarea>
+<p><br/></p>
+第5题:
+<pre class="python"><code> str(32)</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer5"></textarea>
+<p><br/></p>
+第6题:
+<pre class="python"><code> int(6.26)</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer6"></textarea>
+<p><br/></p>
+第7题:
+<pre class="python"><code> float(32)</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer7"></textarea>
+<p><br/></p>
+第8题:
+<pre class="python"><code> float("3.21")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer8"></textarea>
+<p><br/></p>
+第9题:
+<pre class="python"><code> int("434")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer9"></textarea>
+<p><br/></p>
+第10题:
+<pre class="python"><code> int("3.42")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer10"></textarea>
+<p><br/></p>
+第11题:
+<pre class="python"><code> bool(-1)</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer11"></textarea>
+<p><br/></p>
+第12题:
+<pre class="python"><code> bool("")</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer12"></textarea>
+<p><br/></p>
+第13题:
+<pre class="python"><code> bool(0)</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer13"></textarea>
+<p><br/></p>
+第14题:
+<pre class="python"><code> "wrqq" > "acd"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer14"></textarea>
+<p><br/></p>
+第15题:
+<pre class="python"><code> "ttt" == "ttt "</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer15"></textarea>
+<p><br/></p>
+第16题:
+<pre class="python"><code> "sd"*3</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer16"></textarea>
+<p><br/></p>
+第17题:
+<pre class="python"><code> "wer" + "2322"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer17"></textarea>
+<p><br/></p>
+<!--代码输出区-->
+<div id="spread">
+<pre class="python">
+<!--答案区--><code>
+1. True
+2. False
+3. True
+4. True
+5. '32'
+6. 6
+7. 32.0
+8. 3.21
+9. 434
+10. 会报错
+11. True
+12. False
+13. False
+14. True
+15. False
+16. "sdsdsd"
+17. 'wer2322'
+    </code><!--答案区-->
+</pre>
+</div>
+<button style="font-size: 20px" onclick="javascript:jump()">计算得分</button>
+<button id="btn" style="font-size: 20px">查看答案</button>
+<a href="{{url_for('fun2', num=num)}}" target="_blank">
+    <button style="font-size: 20px">查看解析</button>
+</a>
+<!---->
+<a href="{{url_for('fun1', num=num+1)}}">
+    <button style="font-size: 20px">下一页</button>
+</a>
+<a href="{{url_for('index')}}" target="_blank">
+    <button style="font-size: 20px">返回首页</button>
+</a>
+</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/001.js') }}"></script>
+<!--用于隐藏答案的js-->
+<script type="text/javascript">
+    function jump() {
+        alert('还在开发中，等等哈')
+    }
+</script>
+</html>

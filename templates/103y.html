@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<p>这里只对其中2个题目讲解</p>
+
+<p>第4小题的程序直接运行会报错，因为字符串里面有两个需要替换的位置，而format方法里只传入了一个参数，显然是不够</p>
+
+<p>第13小题，strip() 方法用于移除字符串头尾指定的字符（默认为空格或换行符）或字符序列， \n 就是换行符，这里又涉及到转义字符这个概念，本篇不做详细讲解，求知欲强的同学可以自己百度一下</p>
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

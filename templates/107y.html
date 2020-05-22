@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<!--注释区-->
+<p>第一题应该没有异议，关键是第2题和第3题，元组里只有一个数据时，必须有逗号，如果没有逗号，
+    就变成了第3题的形式，第3题本质上是1*2,那对小括号就如同我们小学学过的小括号一样，只是为了体现运算优先级而已。</p>
+
+<p>当元组只有一个数据时，如果不省略了逗号，那么小括号的作用就不再是表示元组，而是表示运算优先级</p>
+<!--注释区-->
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

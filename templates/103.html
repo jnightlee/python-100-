@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python练习题</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<h1>１ 数据类型篇</h1>
+<h2>1.2 字符串练习题</h2>
+<h3>1.2.1 字符串内置方法练习</h3>
+<p>在交互式解释器中完成下列题目</p>
+<!--代码输出区-->
+第1题:<pre class="python"><code> 将字符串 "abcd" 转成大写</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer1"></textarea>
+<p><br/></p>
+第2题:<pre class="python"><code> 计算字符串 "cd" 在 字符串 "abcd"中出现的位置</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer2"></textarea>
+<p><br/></p>
+第3题:请用逗号分割字符串，分割后的结果是什么类型的？
+<pre class="python"><code> 字符串 "a,b,c,d"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer3"></textarea>
+<p><br/></p>
+第4题:执行会出错，请修改代码让其正确执行
+<pre class="python"><code> "{name}喜欢{fruit}".format(name="李雷") </code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer4"></textarea>
+<p><br/></p>
+第5题:请将字符串里的Python替换成 python,并输出替换后的结果<pre class="python"><code> string = "Python is good"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer5"></textarea>
+<p><br/></p>
+第6题:请写程序从这个字符串里获得.html前面的部分，要用尽可能多的方式来做这个事情
+<pre class="python"><code>string = "python修炼第一期.html"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer6"></textarea>
+<p><br/></p>
+第7题:<pre class="python"><code> 如何获取字符串的长度？</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer7"></textarea>
+<p><br/></p>
+第8题:请将字符串里的book替换成apple<pre class="python"><code> "this is a book"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer8"></textarea>
+<p><br/></p>
+第9题:请用程序判断该字符串是否以this开头
+<pre class="python"><code> "this is a book"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer9"></textarea>
+<p><br/></p>
+第10题:请用程序判断该字符串是否以apple结尾<pre class="python"><code> "this is a book" </code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer10"></textarea>
+<p><br/></p>
+第11题:请将字符串里的大写字符转成小写字符<pre class="python"><code> "This IS a book"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer11"></textarea>
+<p><br/></p>
+第12题:请将字符串里的小写字符，转成大写字符<pre class="python"><code> "This IS a book"</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer12"></textarea>
+<p><br/></p>
+第13题:字符串的末尾有一个回车符，请将其删除<pre class="python"><code> "this is a book\n</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer13"></textarea>
+<p><br/></p>
+<!--代码输出区-->
+<div id="spread">
+    <pre class="python">
+<!--答案区--><code>
+1. "abcd".upper()
+2. "abcd".find('cd')
+3. "a,b,c,d".split(',')
+4. "{name}喜欢{fruit}".format(name="李雷", fruit='苹果')
+5. string.replace('Python', 'python')
+6. string[0:string.find('.html')] 或者string[0:-5]
+7. 使用len函数
+8. "this is a book".replace('book', 'apple')
+9. "this is a book".startswith('this')
+10. "this is a book".endswith('apple')
+11. "This IS a book".lower()
+12. "This IS a book".upper()
+13. "this is a book\n".strip()
+</code><!--答案区-->
+    </pre>
+</div>
+<button style="font-size: 20px" onclick="javascript:jump()">计算得分</button>
+<button id="btn" style="font-size: 20px">查看答案</button>
+<a href="{{url_for('fun2', num=num)}}" target="_blank">
+    <button style="font-size: 20px">查看解析</button>
+</a>
+<a href="{{url_for('fun1', num=num-1)}}">
+    <button style="font-size: 20px">上一页</button>
+</a>
+<a href="{{url_for('fun1', num=num+1)}}">
+    <button style="font-size: 20px">下一页</button>
+</a>
+<a href="{{url_for('index')}}" target="_blank">
+    <button style="font-size: 20px">返回首页</button>
+</a>
+</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/001.js') }}"></script>
+<!--用于隐藏答案的js-->
+<script type="text/javascript">
+    function jump() {
+        alert('还在开发中，等等哈')
+    }
+</script>
+</html>

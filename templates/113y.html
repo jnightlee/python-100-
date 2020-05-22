@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<!--注释区-->
+<p>第1题和第2题其实是一个意思，原本统计列表里数据个数不是什么难事，
+    可一旦出现了嵌套列表的情况，有人就分不清了，列表里的数据是以逗号分隔的，
+    lst[3] 是一个列表，其余都是int类型数据，因此lst的长度是4</p>
+
+<p>第3题，lst[1] = 4,是int类型数据</p>
+<p>第4题，lst[3] 的数据类型是列表</p>
+<p>第5题，lst[3]的值是[1, 3, 5, 6, [8, 9, 10, 12]]，仍然是一个列表，其索引为4的数据是[8, 9, 10, 12]，是列表</p>
+<p>第6题，lst[3][4][1]</p>
+<p>第7题，[1, 4, 5, [1, 3, 5, 6, [8, 9, 10, 12, [5, 6]]]],参考5，6两个题目的解答</p>
+<p>第8题，lst[-1]的值是[1, 3, 5, 6, [8, 9, 10, 12]]， 再次取索引为-1的数据为[8, 9, 10, 12]，取索引为-2的数据为10</p>
+<p>第9题，5</p>
+<p>第10题，5</p>
+<p>第11题，4</p>
+<p>第12题， [3, 5]， lst[-1]的值是[1, 3, 5, 6, [8, 9, 10, 12]]</p>
+<p>第13题，[9]， lst[-1][-1]的值是[8, 9, 10, 12]，切片起始位置索引是1，值为9，结束位置是-2，值为10，由于左闭右开，最终结果是[9]</p>
+<!--注释区-->
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

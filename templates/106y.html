@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<!--注释区-->
+<p>你以为存在一个函数，其功能便是将列表里所有的数据都变成原来的两倍，
+    这样才显得变成语言是一个非常神奇的东西，但是很遗憾的告诉你，那些神奇的东西都是程序员自己实现的。</p>
+
+<p>想要修改列表里的数据，必须通过索引对其重新赋值，上面的方法很low，
+    你也可以写一个函数来实现这个功能，我们假设要处理的列表里只int,float,bool,和list数据，
+    不管嵌套基层list，这个函数都应该能正确处理，下面是一段示例代码</p>
+<pre class="python">
+    <code>
+def double_list(lst):
+    for index, item in enumerate(lst):
+        if isinstance(item, bool):
+            continue
+        if isinstance(item, (int, float)):
+            lst[index] *= 2
+        if isinstance(item, list):
+            double_list(item)
+
+
+if __name__ == '__main__':
+    lst = [1, [4, 6], True]
+    double_list(lst)
+    print(lst)
+    </code>
+</pre>
+<!--注释区-->
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

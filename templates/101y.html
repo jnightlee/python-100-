@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<p>唯一需要解释的是4 >= 5,4比5小，怎么可能大于等于5呢，这是错误的，既然是错的，那么就等于False,False的类型是bool</p>
+<a href="{{url_for('fun1', num=101)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

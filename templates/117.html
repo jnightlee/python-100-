@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python练习题</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<h1>１ 数据类型篇</h1>
+<h2>1.5 集合练习题</h2>
+<p>集合间的运算</p>
+<!--问题区-->
+<pre class="python">
+<code>lst1 = [1, 2, 3, 5, 6, 3, 2]
+lst2 = [2, 5, 7, 9]
+</code></pre>
+第1题:
+<pre class="python"><code>哪些整数既在lst1中，也在lst2中</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer1"></textarea>
+<p><br/></p>
+第2题:
+<pre class="python"><code>哪些整数在lst1中，不在lst2中</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer2"></textarea>
+<p><br/></p>
+第3题:
+<pre class="python"><code>两个列表一共有哪些整数</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer3"></textarea>
+<p><br/></p>
+<!--问题区-->
+<div id="spread">
+    <pre class="python">
+<!--答案区--><code>
+lst1 = [1, 2, 3, 5, 6, 3, 2]
+lst2 = [2, 5, 7, 9]
+
+set1 = set(lst1)
+set2 = set(lst2)
+
+# 哪些整数既在lst1中，也在lst2中
+print(set1.intersection(set2))
+
+# 哪些整数在lst1中，不在lst2中
+print(set1.difference(set2))
+
+# 两个列表一共有哪些整数
+print(set1.union(set2))
+</code><!--答案区-->
+    </pre>
+</div>
+<button style="font-size: 20px" onclick="javascript:jump()">计算得分</button>
+<button id="btn" style="font-size: 20px">查看答案</button>
+<a href="{{url_for('fun2', num=num)}}" target="_blank">
+    <button style="font-size: 20px">查看解析</button>
+</a>
+<a href="{{url_for('fun1', num=num-1)}}">
+    <button style="font-size: 20px">上一页</button>
+</a>
+<a href="{{url_for('fun1', num=num+1)}}">
+    <button style="font-size: 20px">下一页</button>
+</a>
+<a href="{{url_for('index')}}" target="_blank">
+    <button style="font-size: 20px">返回首页</button>
+</a>
+</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/001.js') }}"></script>
+<!--用于隐藏答案的js-->
+<script type="text/javascript">
+    function jump() {
+        alert('还在开发中，等等哈')
+    }
+</script>
+</html>

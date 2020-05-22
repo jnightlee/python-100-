@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default.min.css') }}">
+    <script src="{{url_for('static', filename='js/highlight.min.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <title>python练习题</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<h1>１ 数据类型篇</h1>
+<h2>1.4 字典练习题</h2>
+<h3>1.4.3 字典应用（买水果2）</h3>
+<p>小明，小刚去超市里购买水果</p>
+<p>小明购买了苹果，草莓，香蕉，一共花了89块钱，，小刚购买了葡萄，橘子，樱桃，一共花了87块钱</p>
+<p>请从上面的描述中提取数据，存储到字典中，可以根据姓名获取这个人购买的水果种类和总费用。</p>
+<pre class="python"><code>以姓名做key，value仍然是字典</code></pre>
+<p>你的答案：</p>
+<textarea rows="3" style="width:640px" name="answer1"></textarea>
+<p><br/></p>
+<!--代码输出区-->
+<div id="spread">
+    <pre class="python">
+<!--答案区--><code>
+info = {x`
+    '小明': {
+        'fruits': ['苹果', '草莓', '香蕉'],
+        'money': 89
+    },
+    '小刚': {
+        'fruits': ['葡萄', '橘子', '樱桃'],
+        'money': 87
+    }
+}
+</code><!--答案区-->
+    </pre>
+</div>
+<button style="font-size: 20px" onclick="javascript:jump()">计算得分</button>
+<button id="btn" style="font-size: 20px">查看答案</button>
+<a href="{{url_for('fun2', num=num)}}" target="_blank">
+    <button style="font-size: 20px">查看解析</button>
+</a>
+<a href="{{url_for('fun1', num=num-1)}}">
+    <button style="font-size: 20px">上一页</button>
+</a>
+<a href="{{url_for('fun1', num=num+1)}}">
+    <button style="font-size: 20px">下一页</button>
+</a>
+<a href="{{url_for('index')}}" target="_blank">
+    <button style="font-size: 20px">返回首页</button>
+</a>
+</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename='js/001.js') }}"></script>
+<!--用于隐藏答案的js-->
+<script type="text/javascript">
+    function jump() {
+        alert('还在开发中，等等哈')
+    }
+</script>
+</html>

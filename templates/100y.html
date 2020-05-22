@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<h4>1.1.1.1 bool函数转换规则</h4>
+<p>bool函数进行转换时，其结果取决于传入参数与True和False的等价关系，只需记住一点即可
+
+0 , 空字符串, None在条件判断语句中等价于False, 其他数值都等价于True
+
+bool函数在做数据类型转换时遵循该原则
+</p>
+<h4>1.1.1.2 int("3.42") 为什么会报错</h4>
+<p>
+字符串"3.42"可以转成float类型数据3.42, 3.42可以转成int类型数据3，但是字符串"3.42"却不可以直接使用int函数转成3，讲实话，我也觉得这个函数有些不灵活，或许是语言的发明者有自己的考虑吧，咱们对这种问题，不必深究，先做到知道它是什么，将来再去研究为什么
+</p>
+<h4>1.1.1.3 字符串大小比较规则</h4>
+<p>
+两个字符串在比较大小时，比的不是长度，而是内容
+
+字符串左对齐后，逐个字符依次比较，直到可以分出胜负
+</p>
+<h4>1.1.1.4 "sd"*3</h4>
+<p>
+"sd"*3 的意思是sd重复3次，生成一个新的字符串
+</p>
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

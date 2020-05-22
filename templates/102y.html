@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<p>幂运算用两个， 2的2次方表示为2*2</p>
+<p>求模运算用%， 其实就是求余数，不知道余数的打电话给小学老师</p>
+<p>除法中，希望结果有小数部分时用/， 希望只保留整数部分时用 // ,没啥可解释的，请记住他们的区别，懒得记，就别学编程，编程不适合懒惰的人</p>
+<p>开根号，要用到math模块的sqrt方法，这个题目需要你自己去百度或是谷歌，第一次明确的建议你，一定要好好利用搜索引擎，不会用搜索引擎的程序员，永远是菜鸟</p>
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>

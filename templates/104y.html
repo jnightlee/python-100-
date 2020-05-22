@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" href="{{url_for('static', filename='tool.ico')}}">
+    <script type="text/javascript" src="{{url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+    <title>python答案解析</title>
+</head>
+<body>
+<div style="width: 640px; margin: auto;">
+<p>第2题和第10题都报错，是因为超出了索引范围，字符串长度为14，你去20和30的位置取值，当然会报错</p>
+
+<p>关于切片操作，只需要知道从哪里开始到哪里结束就一定能推导出答案，以string[3:-4]为例，
+    3是开始的位置，-4是结束的位置，但这个范围是左闭右开的，从3开始没错，但不会到-4，
+    而是到-5，更前面的一个位置，python支持负数索引，或者说是反向索引，从右向左从-1开始逐渐减小。</p>
+
+<p>第一题中，做切片的时候是从1开始，到20结束，即便是右开，直到19，
+    也仍然超出了索引范围，为什么不报错呢，这就是语言设计者自己的想法了，
+    切片时，不论是开始位置还是结束位置，超出索引范围都不会报错，
+    我猜，大概是由于切片是一个范围操作，这个范围内有值就切出来，没值返回空字符串就好了。</p>
+<a href="{{url_for('fun1', num=num)}}" target="_blank">
+    <button style="font-size: 20px">返回答题</button>
+</a>
+</div>
+</body>
+</html>
