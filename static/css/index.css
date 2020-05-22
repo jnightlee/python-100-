@@ -4,23 +4,15 @@ html {
 
 }
 
-#btn{
-    width: 100px;
-}
-#spread{
-    height: 0;
-    overflow: hidden;
-}
-
 @media only screen and (max-width: 1080px),only screen and (max-width:1080px) {
      html,body {
-    font-size: 30px
+    font-size: 20px
     }
   }
 
 @media only screen and (max-width: 720px),only screen and (max-width:720px) {
     html,body {
-    font-size: 30px
+    font-size: 16px
     }
   }
 
