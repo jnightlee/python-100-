@@ -38,6 +38,8 @@ def test():
     code = None
     if request.method == 'POST':
         code = request.form['code']  # 提取代码
+        if len(str(code)) < 2:
+            code = '#!/usr/bin/python\nprint("Hello, World!")'
         result = fun(code)  # 计算结果
         return render_template('test.html', result=result, code1=code)
     else:
