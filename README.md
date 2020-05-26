@@ -1,9 +1,16 @@
+# 1.1版更新记录
+1. 增加了一个python3在线运行网页
+2. 暂时利用requests调用别人的接口，后期可能会使用沙箱环境自己搭建
 # 说明
 - 基于flask的一个小小小项目
 - 题库来源已经标注，可看说明
 - 使用的唯一依赖就是flask
 ```python
 pip install flask
+```
+- 还有一个requests
+```python
+pip install requests
 ```
 - 目前题库全部都是静态文件，后期可能考虑使用sqlite数据库储存题库与答案
 - 然后用js脚本抽取数据简单评分
